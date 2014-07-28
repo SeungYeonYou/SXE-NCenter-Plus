@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon version="0.2">
+	<title xml:lang="ko">SXE 알림센터 Plus 애드온</title>
+	<description xml:lang="ko">
+	알림센터 모듈에서 구현되지 않은 기능을 구현합니다. 현재는 새 알림을 알려주는 (...) 기능만을 제공합니다.
+	</description>
+	<version>0.1</version>
+	<date>2014-07-29</date>
+	<author email_address="SeungYeonYou.KR+XE@gmail.com" link="http://seungyeon.me/?xe">
+	<name xml:lang="ko">SeungXE</name>
+	</author>
+	<extra_vars>
+		<var name="method" type="select">
+			<title xml:lang="ko">서버 확인 방식</title>
+			<description xml:lang="ko">0.1 버전에서는 AJAX만 지원합니다.</description>
+			<!--<options value="sse">
+				<title xml:lang="ko">SSE (Server Side Events) via HTML5 with EventSource.JS</title>
+			</options>-->
+			<options value="ajax">
+				<title xml:lang="ko">AJAX (Asynchronous JavaScript and XML) via jQuery</title>
+			</options>
+		</var>
+		<var name="load_by" type="select">
+			<title xml:lang="ko">JS, CSS 로드</title>
+			<description xml:lang="ko">자체 서버나 CDN을 사용하실 수 있습니다. CDN를 사용하면 트래픽과 대역폭이 절감될 수 있지만, 속도 저하의 가능성이 있습니다. toastr의 JS와 CSS에 해당됩니다.</description>
+			<options value="local">
+				<title xml:lang="ko">자체 서버 - (서버의 속도에 따름)</title>
+			</options>
+			<options value="jsdeliver">
+				<title xml:lang="ko">jsDeliver - (2.0.1 버전/회선별 속도저하 없음)</title>
+			</options>
+			<options value="cdnjs">
+				<title xml:lang="ko">CDNjs - 최신버전 (공식/일부 회선에서 속도저하 이슈)</title>
+			</options>
+		</var>
+		<var name="delay" type="text">
+			<title xml:lang="ko">딜레이</title>
+			<description xml:lang="ko">각 리퀘스트 간의 딜레이를 조정합니다. default는 10초입니다.</description>
+		</var>
+	</extra_vars>
+</addon>
