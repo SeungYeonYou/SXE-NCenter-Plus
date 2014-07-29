@@ -4,7 +4,7 @@
 	<description xml:lang="ko">
 	알림센터 모듈에서 구현되지 않은 기능을 구현합니다. 현재는 새 알림을 알려주는 (...) 기능만을 제공합니다.
 	</description>
-	<version>0.1</version>
+	<version>0.2</version>
 	<date>2014-07-29</date>
 	<author email_address="SeungYeonYou.KR+XE@gmail.com" link="http://seungyeon.me/?xe">
 	<name xml:lang="ko">SeungXE</name>

@@ -1,6 +1,7 @@
 <?php
 	if(!defined("__XE__")) exit();
 	if(Context::get('module')=='admin' && $called_position != 'before_display_content' && $called_position != 'before_module_init'){return;}
+	if($addon_info->method!='ajax') {return;}
 
 	/**
 	* @addon sxe_ncenter_plus.addon.php
@@ -11,7 +12,7 @@
 	if($called_position=='before_module_init' && Context::get('sxe_ajax')=='sxe_ncenter_plus'){
 		$oNcenter = &getModel('ncenterlite');
 		$count = $oNcenter->_getNewCount();
-		if(Context::get('sxe_ajax_method')=='sxe_sse'){
+		/*if(Context::get('sxe_ajax_method')=='sxe_sse'){
 			header("Content-Type: text/event-stream");
 			header("Cache-Control: no-cache");
 			header("Access-Control-Allow-Origin: *");
@@ -23,7 +24,7 @@
 			echo "data: " . $count . ";";
 			Context::close();
 			exit();
-		}elseif(Context::get('sxe_ajax_method')=='sxe_ajax'){
+		}else*/if(Context::get('sxe_ajax_method')=='sxe_ajax'){
 			header('Content-Type: application/json');
 			header('Cache-Control: no-cache');
 			header("Access-Control-Allow-Origin: *");
